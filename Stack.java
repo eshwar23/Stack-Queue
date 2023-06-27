@@ -1,4 +1,4 @@
-import java.io.*;
+import java.util.*;
 public class Stack
 {
   int s[]=new int [10];
@@ -42,28 +42,28 @@ public class Stack
             System.out.println("The values present are");
             for(i=sp;i>=0;i--)
             System.out.print(s[i]+",");
+            System.out.println();
         }
     }
 // IT IS NOT NECESSARY TO WRITE THE MAIN FUNCTION FOR THE PROGRAM
 //________________________________________________________________
-    public void main()throws IOException// main method to call all the member functions 
+    public static void main()// main method to call all the member functions 
     {
-        InputStreamReader read = new InputStreamReader (System.in);
-        BufferedReader in = new BufferedReader(read);
+        Scanner in = new Scanner(System.in);
         System.out.println("Welcome to the stack program");
         System.out.println("____________________________");
         System.out.println("Enter any stack size below 10");
-        int size=Integer.parseInt(in.readLine());
+        int size=in.nextInt();
         Stack obj=new Stack(size);
         while(true)
         {
             System.out.println("1.PUSH\n2.POP\n3.DISPLAY\n4.STOP\nENTER YOUR CHOICE");
-            int ch=Integer.parseInt(in.readLine());
+            int ch=in.nextInt();
             switch(ch)
             {
                 case 1: 
                 System.out.println("Enter the element");
-                int ele=Integer.parseInt(in.readLine());
+                int ele=in.nextInt();
                 obj.push(ele);
                 break;
                 case 2:
@@ -80,14 +80,4 @@ public class Stack
         }
     }
 }
-                
-                
-                
-                
-            
-            
-            
-        
-        
-          
-  
+              
