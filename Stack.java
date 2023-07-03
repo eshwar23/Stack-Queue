@@ -35,7 +35,7 @@ public class Stack
     }
     void display()// function to display the value of the stack
     {
-        if(n==-1)
+        if(sp==-1)
         System.out.println("No values present");
         else
         {
