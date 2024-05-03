@@ -23,7 +23,7 @@ public class Stack
     }
     void pop()// function to pop the value from the stack 
     {
-      if(n==-1)
+      if(sp==-1)
       System.out.println("underflow");
       else
       {
